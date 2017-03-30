@@ -258,9 +258,9 @@ function receivedMessage(event) {
       case 'who are you':
           sendTextMessage(senderID, 'I am the future major of this amazing place called PalmTree');
       break;
-      // case messageText.includes("where is"):
-      //     sendTextMessage(senderID, 'PalmTree is a beautiful place in the sunshine coast');
-      // break;
+      case messageText.includes("where is"):
+          sendTextMessage(senderID, 'PalmTree is a beautiful place in the sunshine coast');
+      break;
       case 'mad':
           sendTextMessage(senderID, 'I am the future major of this amazing place called PalmTree');
       break;
