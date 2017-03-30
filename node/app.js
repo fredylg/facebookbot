@@ -256,6 +256,12 @@ function receivedMessage(event) {
     // keywords and send back the corresponding example. Otherwise, just echo
     // the text we received.
     switch (messageText) {
+      case 'who are you':
+          sendTextMessage(senderID, 'I am the future major of this amazing place called PalmTree');
+      break;
+      case messageText.includes("where is"):
+          sendTextMessage(senderID, 'PalmTree is a beautiful place in the sunshine coast');        
+      break;
       case 'location':
         sendImageMessage(senderID);
         break;
