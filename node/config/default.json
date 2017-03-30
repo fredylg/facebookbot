@@ -1,6 +1,6 @@
 {
-    "appSecret": "",
-    "pageAccessToken": "",
-    "validationToken": "",
-    "serverURL": ""
+    "appSecret": "6b96fe4b7156c6ec60d971ed26c493ec",
+    "pageAccessToken": "EAALSoZAWM6aoBAFrUZBSSh7h4qccXjIAjAZA10YVEVUpWpx6J22Cv5QNZCI4wFAlZCjjYyujG56cYYymZB5hif5QjrhC15hAg77bvugiaQxxpSpvsiOxl9b1qmDMiR42ZCfLYRm6N6CsklPZCwQONi7G3SUGsZAVgeNrRYgOZCrEzXsgZDZD",
+    "validationToken": "my_token_is",
+    "serverURL": "https://palmview.digitalpleasure.com.au/"
 }
