@@ -1,0 +1,11 @@
+{
+  "lambda": {
+    "role": "messenger-get-started-executor",
+    "name": "messenger-get-started",
+    "region": "us-east-1"
+  },
+  "api": {
+    "id": "11awl0llj1",
+    "module": "bot"
+  }
+}
