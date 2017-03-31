@@ -424,7 +424,7 @@ function sendDynamicImageMessage(recipientId , image_url , text_txt ) {
       id: recipientId
     },
     message: {
-      text: text_txt
+      text: messageText,
       attachment: {
         type: "image",
         payload: {
