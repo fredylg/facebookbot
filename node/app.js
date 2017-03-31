@@ -18,7 +18,7 @@ const
   https = require('https'),
   request = require('request'),
   botBuilder = require('claudia-bot-builder'),
-    excuse = require('huh');
+  excuse = require('huh');
 
 var app = express();
 app.set('port', process.env.PORT || 5000);
@@ -87,6 +87,7 @@ app.post('/webhook', function (req, res) {
   var data = req.body;
 
   return botBuilder(function (req) {
+    console.log("gggggg");
     return 'Thanks for sending ' + req.text  +
         '. Your message is very important to us, but ' +
         excuse.get();
