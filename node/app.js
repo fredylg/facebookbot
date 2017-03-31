@@ -258,7 +258,7 @@ function receivedMessage(event) {
       case 'who are you':
           sendTextMessage(senderID, 'I am the future major of this amazing place called PalmTree');
       break;
-      case messageTextstr.indexOf("where is") > -1:
+      case messageText.indexOf("where is") > -1:
           sendTextMessage(senderID, 'PalmTree is a beautiful place in the sunshine coast');
       break;
       case 'location':
