@@ -262,7 +262,7 @@ function receivedMessage(event) {
       case messageText.indexOf("where is") > -1:
       case 'where is that':
           //sendTextMessage(senderID, 'PalmTree is a beautiful place in the sunshine coast');
-          sendDynamicImageMessage(senderID , "https://i2.au.reastatic.net/640x480/083745333197cc663dacb2d8ba782a21100df46875029cdf4ea35771bd2fbe79/main.jpg" , 'PalmTree is a beautiful place in the sunshine coast' )
+          sendDynamicImageMessage(senderID , "https://i2.au.reastatic.net/640x480/083745333197cc663dacb2d8ba782a21100df46875029cdf4ea35771bd2fbe79/main.jpg" , 'PalmTree is a beautiful place in the sunshine coast' ,'Where is it?' )
       break;//
       case 'location':
         sendImageMessage(senderID);
@@ -419,17 +419,31 @@ function receivedAccountLink(event) {
  * Send an image using the Send API.
  *
  */
-function sendDynamicImageMessage(recipientId , image_url , text_txt ) {
+function sendDynamicImageMessage(recipientId , image_url , text_txt , text_title ) {
   var messageData = {
     recipient: {
       id: recipientId
     },
     message: {
-      text: text_txt,
       attachment: {
-        type: "image",
+        type: "template",
         payload: {
-          url: SERVER_URL + "/assets/rift.png"
+          template_type: "generic",
+          elements: [{
+            title: text_title,
+            subtitle: text_txt,
+            item_url: image_url,
+            image_url: image_url,
+            buttons: [{
+              type: "web_url",
+              url: "https://www.oculus.com/en-us/rift/",
+              title: "Open Web URL"
+            }, {
+              type: "postback",
+              title: "Call Postback",
+              payload: "Payload for first bubble",
+            }],
+          }]
         }
       }
     }
