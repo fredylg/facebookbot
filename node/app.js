@@ -86,6 +86,12 @@ console.log('webhook');
 app.post('/webhook', function (req, res) {
   var data = req.body;
 
+  return botBuilder(function (req) {
+    return 'Thanks for sending ' + req.text  +
+        '. Your message is very important to us, but ' +
+        excuse.get();
+  });
+
   // Make sure this is a page subscription
   if (data.object == 'page') {
     // Iterate over each entry
