@@ -261,7 +261,7 @@ function receivedMessage(event) {
       case messageText.indexOf("where is") > -1:
       case 'where is that':
           //sendTextMessage(senderID, 'PalmTree is a beautiful place in the sunshine coast');
-          sendDynamicImageMessage(recipientId , "https://i2.au.reastatic.net/640x480/083745333197cc663dacb2d8ba782a21100df46875029cdf4ea35771bd2fbe79/main.jpg" , 'PalmTree is a beautiful place in the sunshine coast' )
+          sendDynamicImageMessage(senderID , "https://i2.au.reastatic.net/640x480/083745333197cc663dacb2d8ba782a21100df46875029cdf4ea35771bd2fbe79/main.jpg" , 'PalmTree is a beautiful place in the sunshine coast' )
       break;//
       case 'location':
         sendImageMessage(senderID);
