@@ -16,9 +16,9 @@ const
   crypto = require('crypto'),
   express = require('express'),
   https = require('https'),
-  request = require('request');/*,
+  request = require('request')
   ,botBuilder = require('claudia-bot-builder'),
-  excuse = require('huh');*/
+  excuse = require('huh');
 
 var app = express();
 app.set('port', process.env.PORT || 5000);
