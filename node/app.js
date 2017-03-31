@@ -259,8 +259,10 @@ function receivedMessage(event) {
           sendTextMessage(senderID, 'I am the future major of this amazing place called PalmTree');
       break;
       case messageText.indexOf("where is") > -1:
-          sendTextMessage(senderID, 'PalmTree is a beautiful place in the sunshine coast');
-      break;
+      case 'where is that':
+          //sendTextMessage(senderID, 'PalmTree is a beautiful place in the sunshine coast');
+          sendDynamicImageMessage(recipientId , "https://i2.au.reastatic.net/640x480/083745333197cc663dacb2d8ba782a21100df46875029cdf4ea35771bd2fbe79/main.jpg" , 'PalmTree is a beautiful place in the sunshine coast' )
+      break;//
       case 'location':
         sendImageMessage(senderID);
         break;
@@ -412,7 +414,28 @@ function receivedAccountLink(event) {
   console.log("Received account link event with for user %d with status %s " +
     "and auth code %s ", senderID, status, authCode);
 }
+/*
+ * Send an image using the Send API.
+ *
+ */
+function sendDynamicImageMessage(recipientId , image_url , text_txt ) {
+  var messageData = {
+    recipient: {
+      id: recipientId
+    },
+    message: {
+      text: text_txt
+      attachment: {
+        type: "image",
+        payload: {
+          url: SERVER_URL + "/assets/rift.png"
+        }
+      }
+    }
+  };
 
+  callSendAPI(messageData);
+}
 /*
  * Send an image using the Send API.
  *
